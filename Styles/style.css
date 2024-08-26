@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  grid-template-rows: repeat(4, 1fr);
+  /* place-items: end; */
+  grid-template-areas:
+    "rectangles rectangles rectangles"
+    "rectangles rectangles rectangles"
+    "rectangles rectangles rectangles"
+    "rectangles rectangles rectangles";
+}
+
+.wrapper .melina {
+  position: relative;
+  /* margin-top: -140%;
+  margin-left: 50%; */
+  grid-area: 1/2;
+  font-size: 5em;
+  margin-top: 43%;
+  z-index: 10;
+}
+
+.wrapper .relative {
+  position: relative;
+  grid-area: rectangles;
+  z-index: 1;
+}
+
+.texto {
+  position: relative;
+  grid-area: 2/1;
+  margin-left: 50%;
+}
+.servicios {
+  grid-area: 2/1;
+  margin-top: 10%;
+}
+
+.presentacion {
+  position: relative;
+
+  grid-area: 2/1;
+  z-index: 11;
+}
+
+.ordenLista {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 12;
+}
+
+.mq-ig-foto {
+  position: relative;
+}
+
+.mq-ig-link {
+  position: relative;
+  grid-area: 2/2;
+  z-index: 10;
+  width: 200px;
+  height: 200px;
+  margin-left: 35%;
+}
+
+.mq-web-link {
+  position: relative;
+  grid-area: 2/2;
+  z-index: 10;
+  width: 200px;
+  height: 200px;
+  margin-left: 70%;
+  margin-top: 30%;
+  box-shadow: 0px 1px 10px rgb(0, 0, 0, 0.2);
+}
+
+.mq-web-foto {
+  position: relative;
+}
+
+.socialIcons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.socialIcons a {
+  position: relative;
+  z-index: 10;
+  text-decoration: none;
+  padding: 45px;
+  margin: auto;
+  border-radius: 50%;
+  color: black;
+}
+
+.socialIcons a i {
+  font-size: 2em;
+}
+
+.selected-lang {
+  cursor: pointer;
+  display: flex;
+  line-height: 2;
+  width: 100px;
+}
+
+.selected-lang:before {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-image: url(https://flagsapi.com/US/flat/32.png);
+}
+
+.lang-menu {
+  position: relative;
+  grid-area: 1/1;
+  z-index: 10;
+  width: 100px;
+  cursor: pointer;
+  height: 100px;
+}
+
+.lang-menu ul {
+  width: 150px;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  border: 1px solid #fff;
+  box-shadow: 0px 1px 10px rgb(0, 0, 0, 0.2);
+  display: none;
+}
+
+.lang-menu ul li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lang-menu ul li a {
+  width: 150px;
+  display: block;
+  padding: 5px 10px;
+}
+
+.lang-menu ul li a:hover {
+  background-color: #59ff00;
+}
+
+.lang-menu ul li a:before {
+  content: "";
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin-right: 5px;
+  vertical-align: middle;
+  /* background-image: url(https://flagsapi.com/US/flat/32.png); */
+}
+
+.es:before {
+  background-image: url(https://flagsapi.com/AR/flat/32.png);
+}
+
+.en:before {
+  background-image: url(https://flagsapi.com/US/flat/32.png);
+
+}
+
+.fr:before {
+  background-image: url(https://flagsapi.com/FR/flat/32.png);
+
+}
+
+.ni:before {
+  background-image: url(https://flagsapi.com/JP/flat/32.png);
+
+}
+
+.lang-menu:hover ul{
+display: block;
+}
